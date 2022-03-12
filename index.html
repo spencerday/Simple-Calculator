@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <meta name="description" content="A simple calculator that can take two numbers (spelled out or characters) and apply basic operations on them.">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <form id="calculator-form">
+        <fieldset>
+            <legend>Simple Calculator</legend>
+            <p>This calculator takes two numbers as operands, and lets you select which operation you want done on them.</p>
+            <h3>Input</h3>
+            <p>Operands can either be any number (i.e. 3, 12, 13.56, -23, etc), or you can spell out certain numbers. If you spell out the number it must be a number between 0 and 50 (inclusive), and has to be hypenated it there are two words (i.e. twenty-seven, thirty-two, etc).</p>
+            <div class="container">
+                <div class="inputs">
+                    <label for="operand-1">Operand:</label>
+                    <input type="text" id="operand-1"> 
+                </div>
+                <div class="inputs">
+                    <label>Operator:
+                    <select id="operator">
+                        <option value="">(select operation)</option>
+                        <option value="1">addition (+)</option>
+                        <option value="2">subtraction (-)</option>
+                        <option value="3">multiplication (&#215;)</option>
+                        <option value="4">division (&#247;)</option>
+                    </select>
+                     </label>
+                </div>
+                <div class="inputs">
+                    <label for="operand-2">Operand:</label>
+                    <input type="text" id="operand-2"> 
+                </div>
+                <input id="submit" type="button"  value="Calculate">
+            </div>
+            <br>
+            <div id="result">
+                <h3>Result: </h3>
+                <p id="answer"></p>
+            </div>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
